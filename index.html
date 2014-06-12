@@ -1,0 +1,76 @@
+<!---
+	Author: Daniel Quisbert
+	email: danielquisbert.info@gmail.com
+	blog: http://danielquisbert.blogspot.com
+	--->
+<!DOCTYPE html>
+<html  lang="es">
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="content-type">
+		<title>.: Electrored :.</title>
+		<meta name="description" content="Es un visualizador que mostrar donde se tienen ubicados los puntos de conexiones de la empresa">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="stylesheet" href="css/ext-all.css" type="text/css"/>
+		<link rel="stylesheet" href="css/geoext-all.css" type="text/css"/>
+		<link rel="stylesheet" href="css/gxtheme-gray.css" type="text/css"/>
+		<link rel="stylesheet" href="viewer.css" type="text/css"/>
+		<link rel="stylesheet" href="css/PopupControl.css" type="text/css"/>
+		<script type="text/javascript" src="OpenLayers.js"></script>
+		<script type="text/javascript" src="OpenStreetMap.js"></script>
+		<script src="http://maps.google.com/maps/api/js?v=3&amp;sensor=false"></script>
+		<script type="text/javascript" src="viewer.js"></script>
+		<style>
+			.olControlPanel {
+				right: 0;
+				padding: 5px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<header id="header" >
+			<div id="banner">
+				<h2 title="Electrored">Viewer La Paz</h2>
+			</div>
+		</header>
+		<div id="load">
+			<div class="loading bar">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<section id="main">
+			<div id="map"></div>
+		</section>
+		<footer id="footer">
+			<p title="Electrored &#169;">
+				Electrored &#169; <sup>2014</sup>
+			</p>
+			<p style="position:relative;float: right;right: 40px;" title="La Paz - Bolivia">
+				La Paz - Bolivia
+			</p>
+		</footer>
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				function FadeOut() {
+					setTimeout(function() {
+						FadeDiv();
+					}, 7000);
+				}
+
+				function FadeDiv() {
+					$('#load').fadeOut();
+				}
+
+				FadeOut();
+			});
+		</script>
+	</body>
+</html>
