@@ -93,7 +93,7 @@ function marcaPunto2(x, y, dir, cap_fib, hilos, aten) {
 	new OpenLayers.Projection(new OpenLayers.Projection("EPSG:900913")));
 
 	marker2 = new OpenLayers.Marker(LonLat, iconMarker);
-	marker2.events.register('mousedown', marker, function() {
+	marker2.events.register('mousedown', marker2, function() {
 		popup = new OpenLayers.Popup.FramedCloud("Popup", 
 		new OpenLayers.LonLat(x, y).transform(new OpenLayers.Projection("EPSG:4326"),
 		 new OpenLayers.Projection("EPSG:900913")), null, text, null, true);
@@ -128,7 +128,7 @@ function createTools() {
 				}
 			},
 			'deactivate' : function() {
-				popup.destroy();
+				//popup.destroy();
 				for ( j = 0; j < nombre_cli.length; j = j + 1) {
 					markers[j].destroy();
 				}
@@ -146,7 +146,7 @@ function createTools() {
 				}
 			},
 			'deactivate' : function() {
-				popup.destroy();
+				//popup.destroy();
 				for ( j = 0; j < direccion.length; j = j + 1) {
 					markers2[j].destroy();
 				}
